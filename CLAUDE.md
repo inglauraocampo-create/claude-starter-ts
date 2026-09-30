@@ -14,6 +14,7 @@ Package manager is **pnpm** (pinned via `packageManager` in `package.json`). Nod
 - Single test by name: `pnpm vitest run -t "<test name>"` or `pnpm test -- -t "<test name>"`. Through the `test` script the `--` is required, or pnpm drops the `-t` flag silently.
 - `/test [filter]` — Claude Code skill (`.claude/skills/test/`) that runs the tests and diagnoses failures without editing code
 - `/diff-review [focus]` — read-only review of the local diff with a fixed severity table (named to avoid the built-in `/review` and `/code-review`)
+- `/changelog [version]` — updates `CHANGELOG.md` (Keep a Changelog) from commits since the last tag, grouped by Conventional Commit type. User-invoked only (`disable-model-invocation: true`); never creates tags or commits
 - `pnpm coverage` — tests with v8 coverage; reports (text, HTML at `coverage/index.html`, `coverage/lcov.info`) go to `coverage/`
 - `pnpm lint` / `pnpm lint:fix` — ESLint over the whole repo (`dist/` and `coverage/` ignored)
 - `pnpm format` / `pnpm format:check` — Prettier over the whole repo (respects `.gitignore` and `.prettierignore`)
