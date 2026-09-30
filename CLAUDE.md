@@ -11,7 +11,8 @@ Package manager is **pnpm** (pinned via `packageManager` in `package.json`). Nod
 - `pnpm typecheck` — `tsc --noEmit`
 - `pnpm test` — run all tests once with Vitest (`pnpm test:watch` for watch mode)
 - Single test file: `pnpm test src/index.test.ts`
-- Single test by name: `pnpm vitest run -t "<test name>"`
+- Single test by name: `pnpm vitest run -t "<test name>"` or `pnpm test -- -t "<test name>"`. Through the `test` script the `--` is required, or pnpm drops the `-t` flag silently.
+- `/test [filter]` — Claude Code skill (`.claude/skills/test/`) that runs the tests and diagnoses failures without editing code
 - `pnpm coverage` — tests with v8 coverage; reports (text, HTML at `coverage/index.html`, `coverage/lcov.info`) go to `coverage/`
 - `pnpm lint` / `pnpm lint:fix` — ESLint over the whole repo (`dist/` and `coverage/` ignored)
 - `pnpm format` / `pnpm format:check` — Prettier over the whole repo (respects `.gitignore` and `.prettierignore`)
