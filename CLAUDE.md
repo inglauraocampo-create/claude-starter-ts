@@ -15,6 +15,7 @@ Package manager is **pnpm** (pinned via `packageManager` in `package.json`). Nod
 - `/test [filter]` — Claude Code skill (`.claude/skills/test/`) that runs the tests and diagnoses failures without editing code
 - `/diff-review [focus]` — read-only review of the local diff with a fixed severity table (named to avoid the built-in `/review` and `/code-review`)
 - `/changelog [version]` — updates `CHANGELOG.md` (Keep a Changelog) from commits since the last tag, grouped by Conventional Commit type. User-invoked only (`disable-model-invocation: true`); never creates tags or commits
+- `/start-task <description>` — syncs `master`, creates a `<type>/<description>` branch after confirmation, and starts the task plan-first. Commits use Conventional Commits without scope (not a monorepo). User-invoked only
 - `pnpm coverage` — tests with v8 coverage; reports (text, HTML at `coverage/index.html`, `coverage/lcov.info`) go to `coverage/`
 - `pnpm lint` / `pnpm lint:fix` — ESLint over the whole repo (`dist/` and `coverage/` ignored)
 - `pnpm format` / `pnpm format:check` — Prettier over the whole repo (respects `.gitignore` and `.prettierignore`)
