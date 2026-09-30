@@ -15,6 +15,7 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
+    "coverage": "vitest run --coverage",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier . --write",
@@ -23,6 +24,7 @@
   "devDependencies": {
     "@eslint/js": "^9",
     "@types/node": "^20",
+    "@vitest/coverage-v8": "^4.1.11",
     "eslint": "^9",
     "eslint-config-prettier": "^10.1.8",
     "globals": "^17.12.0",
